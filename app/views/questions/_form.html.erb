@@ -1,0 +1,47 @@
+<%= form_with(model: question, local: true) do |form| %>
+  <% if question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" width=1000px>
+    <%= form.label :prompt %>
+    <%= form.text_area :prompt, id: :question_prompt, :size => "50x10" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis, id: :question_synopsis, :size => "50x10"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :choiceA %>
+    <%= form.text_area :choiceA, id: :question_choiceA, :size => "50x10"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :choiceB %>
+    <%= form.text_area :choiceB, id: :question_choiceB, :size => "50x10"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :choiceC %>
+    <%= form.text_area :choiceC, id: :question_choiceC, :size => "50x10"   %>
+  </div>
+
+  <div class="field">
+    <%= form.label :choiceD %>
+    <%= form.text_area :choiceD, id: :question_choiceD, :size => "50x10"   %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

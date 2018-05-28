@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prompt: MyString
+  synopsis: MyString
+  choiceA: MyString
+  choiceB: MyString
+  choiceC: MyString
+  choiceD: MyString
+
+two:
+  prompt: MyString
+  synopsis: MyString
+  choiceA: MyString
+  choiceB: MyString
+  choiceC: MyString
+  choiceD: MyString

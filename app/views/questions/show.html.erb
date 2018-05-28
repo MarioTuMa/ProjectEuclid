@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prompt:</strong>
+  <%for line in @question.prompt.split("\n")%>
+    <br>
+    <%=line%>
+  <%end%>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @question.synopsis %>
+</p>
+
+<p>
+  <strong>A</strong>
+  <%for line in @question.choiceA.split("\n")%>
+    <br>
+    <%=line%>
+  <%end%>
+</p>
+
+<p>
+  <strong>B</strong>
+  <%for line in @question.choiceB.split("\n")%>
+  <br>
+  <%=line%>
+  <%end%>
+</p>
+<p>
+  <strong>C</strong>
+  <%for line in @question.choiceC.split("\n")%>
+  <br>
+  <%=line%>
+  <%end%>
+</p>
+<p>
+  <strong>D</strong>
+  <%for line in @question.choiceD.split("\n")%>
+    <br>
+    <%=line%>
+  <%end%>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
